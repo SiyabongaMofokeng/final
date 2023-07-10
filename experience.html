@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section section class="banner" id="sec">
+      <header>
+        <a href="index.html" class="logo">SNM.</a>
+        <div id="toggle" onclick="toggle()"></div>
+      </header>
+      <div>
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <h3>Ryzan technologies</h3>
+            <p>Systems Development Learner (2021 - 2022)</p>
+            <p>Web developement with Data Analytics (Web Scrapping )</p>
+          </li>
+          <li>
+            <h3>Afrizan People Intelligence</h3>
+            <p>IT Administrator (2022 - Present )</p>
+            <p>Managed IT infrastructure including servers, network devices, and software applications.
+                Provided technical support to end-users and resolved issues related to hardware, software, and network connectivity.
+                Coordinated IT projects, implemented security measures, and ensured compliance with company policies and regulations.
+                Maintained inventory of IT equipment and software licenses, and managed software updates and patches</p>
+          </li>
+        </ul>
+      </div>
+      </section>
+<div id="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+          </ul>
+        </div>
+      <script type="text/javascript">
+        function toggle(){
+          var sec = document.getElementById('sec');
+          var nav = document.getElementById('navigation');
+          sec.classList.toggle('active')
+          nav.classList.toggle('active')
+        }
+      </script>
+    
+</body>
+</html>

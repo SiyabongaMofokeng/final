@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Responsive Portfolio Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <section class="banner" id="sec">
+    <header>
+      <a href="index.html" class="logo">SNM.</a>
+      <div id="toggle" onclick="toggle()"></div>
+    </header>
+    <div class="content">
+      <h2>Hello World,<br>I'm <span>Siyabonga Mofokeng</span></h2>
+      <p>Welcome to my web portfolio! As an IT administrator and data analyst, I showcase my expertise in managing systems, analyzing data, and driving insights for informed decision-making. Explore and discover!</p>
+      <a href="#">Know More</a>
+    </div>
+    <ul class="sci">
+      <li><a href="https://www.credly.com/badges/e8898f2b-590b-46e5-89ee-049b4065a1c6/email"><img src="google.png"></a></li>
+      <li><a href="https://www.credly.com/badges/44cb63e5-1982-4a2a-bbe8-6362dc08cca9/linked_in_profile"><img src="letter-n.png"></a></li>
+      <li><a href="https://www.linkedin.com/in/siyabonga-mofokeng-13389015b/"><img src="linkedin.png"></a></li>
+    </ul>
+  </section>
+  <div id="navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="contacts.html">Contact</a></li>
+      </ul>
+    </div>
+  <script type="text/javascript">
+    function toggle(){
+      var sec = document.getElementById('sec');
+      var nav = document.getElementById('navigation');
+      sec.classList.toggle('active')
+      nav.classList.toggle('active')
+    }
+  </script>
+</body>
+</html>
