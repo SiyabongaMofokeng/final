@@ -1,46 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Responsive Portfolio Landing Page</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Siyabonga Mofokeng — IT Engineer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+      --gray: #a1a1aa;
+      --border: #1f1f1f;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Bitcount Single", monospace;
+    }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    h1, h2, h3 {
+      letter-spacing: 0.05em;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+    }
+
+    .hero p {
+      color: var(--gray);
+      max-width: 700px;
+      margin: 20px auto 0;
+    }
+
+    /* ABOUT */
+    .about {
+      margin-top: 80px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 80px;
+    }
+
+    .about p {
+      color: var(--gray);
+      max-width: 800px;
+    }
+
+    /* SKILLS */
+    .skills {
+      margin-top: 40px;
+    }
+
+    .skills ul {
+      padding-left: 20px;
+    }
+
+    .skills li {
+      margin-bottom: 10px;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      margin-top: 80px;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 1px;
+      height: 100%;
+      background: var(--border);
+      transform: translateX(-50%);
+    }
+
+    .event {
+      width: 50%;
+      padding: 40px;
+      position: relative;
+    }
+
+    .event.left { left: 0; text-align: right; }
+    .event.right { left: 50%; }
+
+    .event span {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .dot {
+      position: absolute;
+      top: 50px;
+      width: 10px;
+      height: 10px;
+      background: var(--white);
+      border-radius: 50%;
+    }
+
+    .left .dot { right: -5px; }
+    .right .dot { left: -5px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 120px;
+      padding: 40px 0;
+      text-align: center;
+      color: var(--gray);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before { left: 10px; }
+      .event {
+        width: 100%;
+        padding-left: 40px;
+        text-align: left;
+        left: 0 !important;
+      }
+      .dot { left: 6px !important; }
+    }
+  </style>
 </head>
+
 <body>
-  <!-- Header -->
-  <section class="banner" id="sec">
-    <header>
-      <a href="index.html" class="logo">SNM.</a>
-      <div id="toggle" onclick="toggle()"></div>
-    </header>
-    <div class="content">
-      <h2>Hello World,<br>I'm <span>Siyabonga Mofokeng</span></h2>
-      <p>Welcome to my web portfolio! As an IT administrator and Data analyst, I showcase my expertise in managing systems, analyzing data, and driving insights for informed decision-making. Explore and discover!</p>
-      <a href="https://siyabongamofokeng.github.io/">Know More</a>
-      <div data-share-badge-id="d4553d70-b419-468b-bc40-afd80d76de8d" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-    </div>
-    <ul class="sci">
-      <li><a href="https://www.credly.com/badges/e8898f2b-590b-46e5-89ee-049b4065a1c6/email"><img src="google.png"></a></li>
-      <li><a href="https://www.credly.com/badges/44cb63e5-1982-4a2a-bbe8-6362dc08cca9/linked_in_profile"><img src="letter-n.png"></a></li>
-      <li><a href="https://www.linkedin.com/in/siyabonga-mofokeng-13389015b/"><img src="linkedin.png"></a></li>
-    </ul>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Siyabonga Mofokeng</h1>
+    <p>
+      IT Engineer specializing in infrastructure support, Microsoft 365, networking, and VoIP systems.
+      Delivering reliable second-line support, efficient troubleshooting, and scalable IT solutions.
+    </p>
+    <p>
+      smofokeng3@outlook.com | 063 137 4349 <br>
+      LinkedIn: linkedin.com/in/siyabonga-mofokeng-13389015b <br>
+      Portfolio: siyabongamofokeng.github.io/final/
+    </p>
   </section>
-  <div id="navigation">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="project.html">Project</a></li>
-        <li><a href="contacts.html">Contact</a></li>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>Professional Summary</h2>
+    <p>
+      Experienced IT Support Specialist with over 4 years in service desk and IT infrastructure support.
+      Strong background in incident management, Active Directory, Microsoft 365, VoIP deployment,
+      and network troubleshooting. Known for resolving 99% of daily tickets efficiently while maintaining
+      high service standards and SLA compliance.
+    </p>
+
+    <div class="skills">
+      <h3>Core Competencies</h3>
+      <ul>
+        <li>ITIL-based Support & SLA Management</li>
+        <li>Active Directory, Azure AD, Group Policy</li>
+        <li>Microsoft 365 (Exchange, Teams, SharePoint, Intune)</li>
+        <li>Networking: DNS, DHCP, VPN, LAN/WAN</li>
+        <li>VoIP Deployment & Troubleshooting</li>
+        <li>PowerShell & Automation</li>
+        <li>Windows Server & SCCM</li>
       </ul>
     </div>
-  <script type="text/javascript">
-    function toggle(){
-      var sec = document.getElementById('sec');
-      var nav = document.getElementById('navigation');
-      sec.classList.toggle('active')
-      nav.classList.toggle('active')
-    }
-  </script>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline">
+
+    <div class="event left">
+      <div class="dot"></div>
+      <h3>Tier 2 IT Support Specialist — Online Direct</h3>
+      <span>Mar 2024 – Present</span>
+      <p>
+        Managing advanced network issues, Microsoft 365 administration, and server environments.
+        Supporting VoIP systems and Fortigate deployments across multi-site clients.
+      </p>
+    </div>
+
+    <div class="event right">
+      <div class="dot"></div>
+      <h3>IT Support Engineer — Bayport Financial Services</h3>
+      <span>Oct 2023 – Dec 2023</span>
+      <p>
+        Delivered remote and on-site support, managed SCCM deployments, and supported Azure AD
+        policies for over 400 users in a team-based environment.
+      </p>
+    </div>
+
+    <div class="event left">
+      <div class="dot"></div>
+      <h3>Junior Systems Administrator — Afrizan</h3>
+      <span>Oct 2022 – Oct 2023</span>
+      <p>
+        Automated onboarding, managed GPO, maintained 99.9% uptime, deployed VoIP solutions,
+        and handled Microsoft tenant migrations.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="about">
+    <h2>Education & Certifications</h2>
+    <ul>
+      <li>BSc Computational & Applied Mathematics — Wits (Coursework completed)</li>
+      <li>Systems Support Certificate — YAB (NQF 5)</li>
+      <li>Systems Development Certificate — iFundi (NQF 5)</li>
+      <li>ITIL Foundation (Pending)</li>
+      <li>Google IT Support & Data Analytics</li>
+      <li>Cisco Cybersecurity Essentials & Networking Basics</li>
+      <li>Fortigate FCA Certification</li>
+      <li>Yealink VoIP Certification</li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2026 Siyabonga Mofokeng — IT Engineer Portfolio
+  </footer>
+
+</div>
+
 </body>
 </html>
